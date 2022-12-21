@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* Start Variables */
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-color: var(--Violet);
+}
+
+/* End Global Rules */
+/* Start Main */
+main {
+    max-width: 1200px;
+    margin: 0 20px;
+}
+
+main .logo {
+    margin-block: 30px 70px;
+}
+
+main .logo img {
+    width: 180px;
+}
+
+main .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .container .image {
+    flex-basis: 55%;
+}
+
+main .container .image img {
+    width: 100%;
+    /* max-width: 100%; */
+}
+
+main .container .content {
+    flex-basis: 45%;
+    padding: 30px;
+}
+
+main .container .content h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    transition: .3s;
+}
+
+main .container .content p {
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+main .container .content button {
+    padding: 15px 60px;
+    border-radius: 50px;
+    border: none;
+    color: var(--Violet);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .3s;
+}
+
+main .container .content button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+main .social-media {
+    width: fit-content;
+    position: relative;
+    margin: 20px 20px 0 auto;
+}
+
+main .social-media img {
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid rgb(255 255 255 / 90%);
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+}
+
+main .social-media img:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+@media (max-width: 1050px) {
+    main .container .content h1 {
+        margin-top: 15px;
+        margin-block: 15px;
+        font-size: 30px;
+    }
+
+    main .container .content p {
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 930px) {
+    main .container .content {
+        padding-top: 0;
+    }
+
+    main .container .content h1 {
+        margin-top: 10px;
+        font-size: 27px;
+    }
+
+    main .container .content p {
+        line-height: 1.6;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    main .container {
+        flex-direction: column;
+        max-width: 500px;
+        min-width: 250px;
+    }
+
+    main .container .content {
+        text-align: center;
+    }
+
+    main .container .content h1 {
+        font-size: 22px;
+    }
+
+    main .container .content p {
+        margin-bottom: 20px
+    }
+
+    main .social-media {
+        margin-inline: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* End Main */
